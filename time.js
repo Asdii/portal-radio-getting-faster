@@ -7,7 +7,7 @@ var update_time = new Date();
 
 var percent_time = 0.5;
 
-var inv_rate = 1;
+var inv_rate = 4;
 var rate_timer = percent_time;
 
 function update() {
