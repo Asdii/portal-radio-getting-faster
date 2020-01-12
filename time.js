@@ -5,9 +5,9 @@ var radio = new Howl({
 
 var update_time = new Date();
 
-var percent_time = 0.5;
+var percent_time = 0.05;
 
-var inv_rate = 4;
+var inv_rate = 1;
 var rate_timer = percent_time;
 
 function update() {
@@ -16,7 +16,7 @@ function update() {
 	var delta = new_time.getTime() - update_time.getTime();
 	update_time.setTime(new_time.getTime());
 
-	rate_timer -= (1 / inv_rate) * delta / 1000;
+	rate_timer -= (5 / inv_rate) * delta / 1000;
 
 	if (rate_timer <= 0) {
 		rate_timer += percent_time;
