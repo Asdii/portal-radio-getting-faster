@@ -20,7 +20,7 @@ function update() {
 
 	if (rate_timer <= 0) {
 		rate_timer += percent_time;
-		inv_rate += 0.0005;
+		inv_rate += 0.0003;
 		radio.rate(1 / inv_rate);
 		document.getElementById("texto").innerHTML = "velocidad: " + (1 / inv_rate * 100).toFixed(2) + "%";
 		document.getElementById("radio").style.opacity = 1 / inv_rate / inv_rate;
