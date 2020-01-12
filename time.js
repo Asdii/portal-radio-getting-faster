@@ -1,5 +1,5 @@
 var radio = new Radio({
-	src: ["audio/radio.ogg"],
+	src: ["audio/radio.wav"],
 	loop: true,
 });
 
