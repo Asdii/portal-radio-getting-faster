@@ -26,7 +26,7 @@ function update() {
 	}
 
 	document.getElementById("radio").style.top = (rate - Math.random() * rate * 2) + "px";
-	document.getElementById("radui").style.left = (rate - Math.random() * rate * 2) + "px";
+	document.getElementById("radio").style.left = (rate - Math.random() * rate * 2) + "px";
 	requestAnimationFrame(update);
 }
 
