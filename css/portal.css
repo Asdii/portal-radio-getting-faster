@@ -9,11 +9,20 @@ html, body {
 	text-align: center;
 }
 
-#bg {
+#texto {
 	display: inline-block;
 	width: 640px;
 	height: 440px;
 	margin-top: 20px;
+	overflow: hidden;
+	text-align: center;
+}
+
+#bg {
+	display: inline-block;
+	width: 640px;
+	height: 440px;
+	margin-top: 200px;
 	overflow: hidden;
 	text-align: center;
 }
