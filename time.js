@@ -21,7 +21,7 @@ function update() {
 	if (rate_timer <= 0) {
 		rate_timer += percent_time;
 		rate += 0.01;
-		bonetrousle.rate(rate);
+		radio.rate(rate);
 		document.getElementById("texto").innerHTML = "velocidad: " + (rate * 100).toFixed(0) + "%";
 	}
 
