@@ -16,11 +16,11 @@ function update() {
 	var delta = new_time.getTime() - update_time.getTime();
 	update_time.setTime(new_time.getTime());
 
-	rate_timer -= (20 / inv_rate) * delta / 1000;
+	rate_timer -= (1 / inv_rate) * delta / 1000;
 
 	if (rate_timer <= 0) {
 		rate_timer += percent_time;
-		inv_rate += 0.00001;
+		inv_rate += 0.01;
 		radio.rate(1 / inv_rate);
 		document.getElementById("texto").innerHTML = "velocidad: " + (1 / inv_rate * 100).toFixed(2) + "%";
 		document.getElementById("radio").style.opacity = 1 / inv_rate / inv_rate;
