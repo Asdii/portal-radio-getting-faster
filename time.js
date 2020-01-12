@@ -22,7 +22,7 @@ function update() {
 		rate_timer += percent_time;
 		inv_rate += 0.00001;
 		radio.rate(1 / inv_rate);
-		document.getElementById("speed").innerHTML = "speed: " + (1 / inv_rate * 100).toFixed(2) + "%";
+		document.getElementById("texto").innerHTML = "velocidad: " + (1 / inv_rate * 100).toFixed(2) + "%";
 		document.getElementById("radio").style.opacity = 1 / inv_rate / inv_rate;
 	}
 
