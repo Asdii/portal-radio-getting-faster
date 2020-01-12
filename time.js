@@ -5,9 +5,9 @@ var radio = new Howl({
 
 var update_time = new Date();
 
-var percent_time = 0.05;
+var percent_time = 0.57686;
 
-var inv_rate = 1;
+var rate = 1;
 var rate_timer = percent_time;
 
 function update() {
@@ -16,16 +16,17 @@ function update() {
 	var delta = new_time.getTime() - update_time.getTime();
 	update_time.setTime(new_time.getTime());
 
-	rate_timer += (1 / inv_rate) * delta / 1000;
+	rate_timer -= rate * delta / 1000;
 
 	if (rate_timer <= 0) {
 		rate_timer += percent_time;
-		inv_rate += 0.0002;
-		radio.rate(1 / inv_rate);
-		document.getElementById("texto").innerHTML = "velocidad: " + (1 / inv_rate * 100).toFixed(2) + "%";
-		document.getElementById("radio").style.opacity = 1 / inv_rate / inv_rate;
+		rate += 0.01;
+		bonetrousle.rate(rate);
+		document.getElementById("texto").innerHTML = "velocidad: " + (rate * 100).toFixed(0) + "%";
 	}
 
+	document.getElementById("radio").style.top = (rate - Math.random() * rate * 2) + "px";
+	document.getElementById("radui").style.left = (rate - Math.random() * rate * 2) + "px";
 	requestAnimationFrame(update);
 }
 
