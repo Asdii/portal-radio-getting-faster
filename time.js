@@ -1,4 +1,4 @@
-var radio = new Radio({
+var radio = new Howl({
 	src: ["audio/radio.ogg"],
 	loop: true,
 });
